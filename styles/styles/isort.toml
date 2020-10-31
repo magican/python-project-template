@@ -1,0 +1,13 @@
+["setup.cfg".isort]
+# isort configuration:
+# https://github.com/timothycrosley/isort/wiki/isort-Settings
+# These values should be placed inside `setup.cfg` in your repo:
+atomic = true 
+default_section = "THIRDPARTY" 
+include_trailing_comma = true 
+indent = 4 
+known_first_party = "application" 
+line_length = 79 
+multi_line_output = 3 # Vertical Hanging Indent
+not_skip = "__init__.py" 
+use_parentheses = true

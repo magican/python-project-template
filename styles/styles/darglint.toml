@@ -1,0 +1,5 @@
+["setup.cfg".darglint]
+# darglint configuration:
+# https://github.com/terrencepreilly/darglint
+# These values should be placed inside `setup.cfg` in your repo:
+strictness = "long"

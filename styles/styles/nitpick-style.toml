@@ -1,0 +1,16 @@
+# Default style file for nitpick
+# style = "https://raw.githubusercontent.com/andreoliwa/nitpick/v0.22.2/nitpick-style.toml"
+
+[nitpick]
+minimum_version = "0.22.0"
+
+[nitpick.styles]
+include = [
+  "darglint.toml",
+  "file-structure.toml",
+  "flake8.toml",
+  "isort.toml",
+  "mypy.toml",
+  "poetry.toml",
+  "pre-commit.toml"
+]

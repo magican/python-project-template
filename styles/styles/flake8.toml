@@ -1,0 +1,23 @@
+["setup.cfg".flake8]
+# flake8 configuration:
+# https://flake8.pycqa.org/en/latest/user/configuration.html
+# These values should be placed inside `setup.cfg` in your repo:
+docstring-quotes = "double"
+doctests = true
+format = "wemake"
+inline-quotes = "single"
+multiline-quotes = "double"
+show-source = true
+statistics = false
+
+# Plugins:
+max-complexity = 6
+max-doc-length = 79
+max-line-length = 79
+
+# Disable some pydocstyle checks:
+# Exclude some pydoctest checks globally:
+ignore = "D100, D102, D103, D104, D106, D107, D205, D401, W504, X100, S101, RST303, RST304, DAR103, DAR203, WPS110, WPS115, WPS221, WPS300, WPS305, WPS306, WPS317, WPS318, WPS319, WPS323, WPS326, N400, WPS407, WPS410, WPS412, WPS420, WPS421, WPS430, WPS432, WPS426, WPS428, WPS431, WPS442, WPS602, WPS604"
+
+# Excluding some directories:
+exclude = ".git __pycache__ .venv .eggs *.egg tests messages"

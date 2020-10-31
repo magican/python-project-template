@@ -1,0 +1,33 @@
+# System files
+*~
+.*
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logging
+logs/
+*.log
+
+# Environments
+.env
+env/
+venv/
+
+# Poetry
+poetry.lock
+
+# Don't ignore
+## Samples
+!.env.example
+
+## Code style
+!.editorconfig
+!.pre-commit-config.yaml
+
+## VSC
+!.gitattributes
+!.gitignore
+!.gitkeep

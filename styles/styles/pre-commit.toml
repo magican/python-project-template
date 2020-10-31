@@ -1,0 +1,113 @@
+# Nitpick recommends those plugins as part of the style, but doesn't install them automatically as before.
+# This way, the developer has the choice of overriding this style, instead of having lots of plugins installed
+# without being asked.
+
+# Nitpick
+[["pre-commit-config.yaml".repos]]
+yaml = """
+  - repo: local
+    hooks:
+    - id: nitpick
+      name: Nitpick
+      description: Enforce the same configuration (flake8, isort, mypy etc.) across multiple Python projects
+      entry: flake8 --select=NIP -j 0
+      language: python
+      types: [python]
+      always_run: true
+"""
+
+# Check for merge conflicts
+[["pre-commit-config.yaml".repos]]
+yaml = """
+  - repo: local
+    hooks:
+    - id: check-merge-conflict
+      name: Check for merge conflicts
+      description: Check for files that contain merge conflict strings.
+      entry: check-merge-conflict
+      language: python
+      stages: [commit, push]
+"""
+
+# autoflake
+[["pre-commit-config.yaml".repos]]
+yaml = """
+  - repo: local
+    hooks:
+    - id: autoflake
+      name: autoflake
+      description: Removes unused imports and unused variables as reported by pyflakes.
+      entry: autoflake
+      args: [--in-place, --remove-all-unused-imports]
+      language: python
+      types: [python]
+"""
+
+# isort
+[["pre-commit-config.yaml".repos]]
+yaml = """
+  - repo: local
+    hooks:
+    - id: isort
+      name: isort
+      description: isort your imports, so you don't have to.
+      entry: isort
+      args: [--recursive, --apply]
+      language: python
+      types: [python]
+"""
+
+# docformatter
+[["pre-commit-config.yaml".repos]]
+yaml = """
+  - repo: local
+    hooks:
+    - id: docformatter
+      name: docformatter
+      description: Formats docstrings to follow PEP 257.
+      entry: docformatter
+      args: [--in-place]
+      language: python
+      types: [python]
+"""
+
+# autopep8
+[["pre-commit-config.yaml".repos]]
+yaml = """
+  - repo: local
+    hooks:
+    - id: autopep8
+      name: autopep8
+      description: automatically formats Python code to conform to the PEP 8 style guide.
+      entry: autopep8
+      args: [--in-place]
+      language: python
+      types: [python]
+"""
+
+# flake8
+[["pre-commit-config.yaml".repos]]
+yaml = """
+  - repo: local
+    hooks:
+    - id: flake8
+      name: flake8
+      description: "`flake8` is a command-line utility for enforcing style consistency across Python projects."
+      entry: flake8
+      language: python
+      types: [python]
+      require_serial: true
+"""
+
+# mypy
+[["pre-commit-config.yaml".repos]]
+yaml = """
+  - repo: local
+    hooks:
+    - id: mypy
+      name: mypy
+      description: static type checker for Python 3
+      entry: mypy
+      language: python
+      types: [python]
+"""

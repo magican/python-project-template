@@ -1,0 +1,2 @@
+[nitpick.files.present]
+"pyproject.toml" = "Install poetry and run 'poetry init' to create it"
