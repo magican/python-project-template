@@ -3,7 +3,7 @@ build-backend = "poetry.masonry.api"
 requires = ["poetry>=1.0.5"]
 
 [tool.nitpick]
-style = "styles/styles/nitpick-style.toml"
+style = "https://raw.githubusercontent.com/magican/python-project-styles/main/styles/nitpick-style.toml"
 
 [tool.poetry]
 authors = ["magican <alexander.myasoedov@gmail.com>"]
